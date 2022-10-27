@@ -11,7 +11,7 @@ Modifying DMLDiD :Double/debiased machine learning for difference-in-differences
   - repeated cross-section  (dmldid_rcs):
     - I do not believe this model is adequate. This repository will examine and attempt to modify this.
 
-## sub paper
+## sub papers
 [2] Abadie A. (2005). Semiparametric difference-in-differences estimators, Review of Economic Studies, 72, 1–19.
 - References in Chang (2020)
 - Proposes an IPW estimator for DiD.
