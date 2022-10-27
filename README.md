@@ -56,7 +56,7 @@ Modifying DMLDiD :Double/debiased machine learning for difference-in-differences
   - Even if the covariates include time-dependent variables, a large number of time-dependent *time-independent interaction terms must be thrown in. Still, it is almost impossible to predict the label such that it flips 180 degrees positive or negative due to unobserved variables (for l2k, T is unobserved)
 - The (Ti-λ̂k) part need not be included in the prediction task. It should only be designed to estimate the latent outcome of Y
 
-## My solution
+# My solution
 
 - First, divide l2k into two parts l2k_t1, l2k_t0 are arbitrary machine learning models
 ![\hat{\ell }_{2k}^{t } = E[Y_i   |  T=t,D=0, X_i]](https://render.githubusercontent.com/render/math?math=%5Ccolor%7Bwhite%7D%5Clarge+%5Cdisplaystyle+%5Chat%7B%5Cell+%7D_%7B2k%7D%5E%7Bt+%7D+%3D+E%5BY_i+++%7C++T%3Dt%2CD%3D0%2C+X_i%5D)
