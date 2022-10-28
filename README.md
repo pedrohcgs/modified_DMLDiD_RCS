@@ -59,7 +59,10 @@ Modifying DMLDiD :Double/debiased machine learning for difference-in-differences
   - For example, if the covariates are not time-dependent (e.g., demographic information such as male/female, race, etc.), prediction of this label is not possible (although it can be learned = no error occurs, but the prediction is meaningless)
   - Even if the covariates include time-dependent variables, a large number of time-dependent *time-independent interaction terms must be thrown in. Still, it is almost impossible to predict the label such that it flips 180 degrees positive or negative due to unobserved variables (for l2k, T is unobserved)
 - The (Ti-λ̂k) part need not be included in the prediction task. It should only be designed to estimate the latent outcome of Y
+
 ![image](https://user-images.githubusercontent.com/16971400/198539758-ae7d2ccd-3e36-42e6-bf6d-5db2d0079dcd.png)
+
+- the notebook on this issue is [here](https://github.com/MasaAsami/modified_DMLDiD_RCS/blob/main/notebooks/Why_original_l2kmodel_is_wrong.ipynb)
 
 # My solution
 
