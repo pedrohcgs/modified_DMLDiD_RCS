@@ -75,3 +75,18 @@ Modifying DMLDiD :Double/debiased machine learning for difference-in-differences
 \left(T_{i}-\hat{\lambda }_{k}\right) 
  \left(Y_{i}-\hat{\ell }_{2k}^{t}\left(X_{i}\right)\right)
 ](https://render.githubusercontent.com/render/math?math=%5Ccolor%7Bwhite%7D%5Clarge+%5Cdisplaystyle+%5Ctilde%7B%5Ctheta+%7D_%7Bk%7D%3D%5Cfrac%7B1%7D%7Bn%7D%5Csum+_%7Bi%5Cin+I_%7Bk%7D%7D%5Cfrac%7BD_%7Bi%7D-%5Chat%7Bg%7D_%7Bk%7D%5Cleft%28X_%7Bi%7D%5Cright%29%7D%7B%5Chat%7Bp%7D_%7Bk%7D%5Chat%7B%5Clambda+%7D_%7Bk%7D%5Cleft%281-%5Chat%7B%5Clambda+%7D_%7Bk%7D%5Cright%29%5Cleft%281-%5Chat%7Bg%7D_%7Bk%7D%5Cleft%28X_%7Bi%7D%5Cright%29%5Cright%29%7D%0A%5Ctimes%0A%5Cleft%28T_%7Bi%7D-%5Chat%7B%5Clambda+%7D_%7Bk%7D%5Cright%29+%0A+%5Cleft%28Y_%7Bi%7D-%5Chat%7B%5Cell+%7D_%7B2k%7D%5E%7Bt%7D%5Cleft%28X_%7Bi%7D%5Cright%29%5Cright%29%0A)
+
+# Simulation result
+## simulation data
+The following simulation data were created:
+- repeated cross-section data
+- true ATT := 3
+- dim(X) := 10
+- N = 500
+## result: modified-DMLDiD is better than Chang(2020)
+- The notebook is [here](https://github.com/MasaAsami/modified_DMLDiD_RCS/blob/main/notebooks/DMLDiD_RCS_with_SIMDATA.ipynb).
+- ture ATT = 3
+![image](https://user-images.githubusercontent.com/16971400/198532873-c2a574f5-1625-4825-987c-3fdb9b5132ba.png)
+
+
+
