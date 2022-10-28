@@ -21,6 +21,7 @@ Modifying DMLDiD :Double/debiased machine learning for difference-in-differences
 
 # What is wrong with dmldid_rcs ?
 ## dmldid_rcs's ATT in Chang (2020)
+
 - Chang (2020) defines the ATT estimator for repeated cross-section data as follows:
 - Y : outcome
 - T : binary value (post =1 / pre = 0)
@@ -48,6 +49,9 @@ Modifying DMLDiD :Double/debiased machine learning for difference-in-differences
   - features：covariates X（X with arbitrary transformations as q）
   - training data：untreated data only 
   - with cross-fitting
+  
+![image](https://user-images.githubusercontent.com/16971400/198495736-bc34e71b-a1bd-443f-ab83-2347c9ab0f28.png)
+
 
 ## l2k is an unrealistic prediction task
 - The label is positive if T=1 and negative if T=0. The sign is easily reversed by a change in T alone.
