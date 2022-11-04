@@ -31,17 +31,8 @@ Modifying DMLDiD :Double/debiased machine learning for difference-in-differences
 - λ̂k : T's average（cross-fitting）
 - ĝk(X) : propensity socre（cross-fitting）
 
+<img width="611" alt="image" src="https://user-images.githubusercontent.com/16971400/199974792-be66c6e3-19b5-4982-aff5-4763674134ce.png">
 
-![
-\tilde{\theta }_{k}=\frac{1}{n}\sum _{i\in I_{k}}\frac{D_{i}-\hat{g}_{k}\left(X_{i}\right)}{\hat{p}_{k}\hat{\lambda }_{k}\left(1-\hat{\lambda }_{k}\right)\left(1-\hat{g}_{k}\left(X_{i}\right)\right)}\times \left(\left(T_{i}-\hat{\lambda }_{k}\right)Y_{i}-\hat{\ell }_{2k}\left(X_{i}\right)\right)](https://render.githubusercontent.com/render/math?math=%5Ccolor%7Bwhite%7D%5Clarge+%5Cdisplaystyle+%0A%5Ctilde%7B%5Ctheta+%7D_%7Bk%7D%3D%5Cfrac%7B1%7D%7Bn%7D%5Csum+_%7Bi%5Cin+I_%7Bk%7D%7D%5Cfrac%7BD_%7Bi%7D-%5Chat%7Bg%7D_%7Bk%7D%5Cleft%28X_%7Bi%7D%5Cright%29%7D%7B%5Chat%7Bp%7D_%7Bk%7D%5Chat%7B%5Clambda+%7D_%7Bk%7D%5Cleft%281-%5Chat%7B%5Clambda+%7D_%7Bk%7D%5Cright%29%5Cleft%281-%5Chat%7Bg%7D_%7Bk%7D%5Cleft%28X_%7Bi%7D%5Cright%29%5Cright%29%7D%5Ctimes+%5Cleft%28%5Cleft%28T_%7Bi%7D-%5Chat%7B%5Clambda+%7D_%7Bk%7D%5Cright%29Y_%7Bi%7D-%5Chat%7B%5Cell+%7D_%7B2k%7D%5Cleft%28X_%7Bi%7D%5Cright%29%5Cright%29)
-
-
-![\hat{\ell }_{2k}\left(x_{i}\right)\equiv q_{i}^{\prime }\hat{\beta }_{2k}
-](https://render.githubusercontent.com/render/math?math=%5Ccolor%7Bwhite%7D%5Clarge+%5Ctextstyle+%5Chat%7B%5Cell+%7D_%7B2k%7D%5Cleft%28x_%7Bi%7D%5Cright%29%5Cequiv+q_%7Bi%7D%5E%7B%5Cprime+%7D%5Chat%7B%5Cbeta+%7D_%7B2k%7D%0A)
-
-
-![\hat{\beta }_{2k}\in \arg \min _{\beta \in \mathbb {R}^{p}}\left[\frac{1}{M_{k}}\sum _{i\in I_{k}^{c}}\left(1-D_{i}\right)\left(\left(T_{i}-\hat{\lambda }_{k}\right)Y_{i}-q_{i}^{\prime }\beta \right)^{2}\right]+\frac{\lambda _{2k}}{M_{k}}\parallel \hat{\Upsilon }_{2k}\beta \parallel _{1}
-](https://render.githubusercontent.com/render/math?math=%5Ccolor%7Bwhite%7D%5Clarge+%5Cdisplaystyle+%5Chat%7B%5Cbeta+%7D_%7B2k%7D%5Cin+%5Carg+%5Cmin+_%7B%5Cbeta+%5Cin+%5Cmathbb+%7BR%7D%5E%7Bp%7D%7D%5Cleft%5B%5Cfrac%7B1%7D%7BM_%7Bk%7D%7D%5Csum+_%7Bi%5Cin+I_%7Bk%7D%5E%7Bc%7D%7D%5Cleft%281-D_%7Bi%7D%5Cright%29%5Cleft%28%5Cleft%28T_%7Bi%7D-%5Chat%7B%5Clambda+%7D_%7Bk%7D%5Cright%29Y_%7Bi%7D-q_%7Bi%7D%5E%7B%5Cprime+%7D%5Cbeta+%5Cright%29%5E%7B2%7D%5Cright%5D%2B%5Cfrac%7B%5Clambda+_%7B2k%7D%7D%7BM_%7Bk%7D%7D%5Cparallel+%5Chat%7B%5CUpsilon+%7D_%7B2k%7D%5Cbeta+%5Cparallel+_%7B1%7D%0A)
 
 
 - l2k is the following ML model (Chang(2020) uses Lasso, but essentially any ML is OK)
@@ -74,11 +65,7 @@ Modifying DMLDiD :Double/debiased machine learning for difference-in-differences
   - Doubly robust in propensity score and l2k (outcome model) is achieved.
   - cross-fitting
 
-![\tilde{\theta }_{k}=\frac{1}{n}\sum _{i\in I_{k}}\frac{D_{i}-\hat{g}_{k}\left(X_{i}\right)}{\hat{p}_{k}\hat{\lambda }_{k}\left(1-\hat{\lambda }_{k}\right)\left(1-\hat{g}_{k}\left(X_{i}\right)\right)}
-\times
-\left(T_{i}-\hat{\lambda }_{k}\right) 
- \left(Y_{i}-\hat{\ell }_{2k}^{t}\left(X_{i}\right)\right)
-](https://render.githubusercontent.com/render/math?math=%5Ccolor%7Bwhite%7D%5Clarge+%5Cdisplaystyle+%5Ctilde%7B%5Ctheta+%7D_%7Bk%7D%3D%5Cfrac%7B1%7D%7Bn%7D%5Csum+_%7Bi%5Cin+I_%7Bk%7D%7D%5Cfrac%7BD_%7Bi%7D-%5Chat%7Bg%7D_%7Bk%7D%5Cleft%28X_%7Bi%7D%5Cright%29%7D%7B%5Chat%7Bp%7D_%7Bk%7D%5Chat%7B%5Clambda+%7D_%7Bk%7D%5Cleft%281-%5Chat%7B%5Clambda+%7D_%7Bk%7D%5Cright%29%5Cleft%281-%5Chat%7Bg%7D_%7Bk%7D%5Cleft%28X_%7Bi%7D%5Cright%29%5Cright%29%7D%0A%5Ctimes%0A%5Cleft%28T_%7Bi%7D-%5Chat%7B%5Clambda+%7D_%7Bk%7D%5Cright%29+%0A+%5Cleft%28Y_%7Bi%7D-%5Chat%7B%5Cell+%7D_%7B2k%7D%5E%7Bt%7D%5Cleft%28X_%7Bi%7D%5Cright%29%5Cright%29%0A)
+<img width="546" alt="image" src="https://user-images.githubusercontent.com/16971400/199974910-cdb70ede-9f2f-4613-b4c2-230d1426967c.png">
 
 # Simulation result
 ## simulation data
